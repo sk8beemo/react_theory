@@ -1,29 +1,15 @@
 import React from 'react';
 
-// function Car () {
-//     return (
-//     <h2>This is a car component</h2>
-//     )
-// }
-
-// const car = () => {
-//     return <div> This is a Car component</div>
-// }
-// const car = () => <div> This is a Car component</div>
-
-// const car = () => (
-//     <div>
-//          This is a Car component
-//          <strong>test</strong>
-//     </div>
-// )
-
-// export default car;
-
 export default (props) => (
-    <div>
+    <div style={{
+        border: '1px solid gray',
+        margin: '10px auto',
+        width: '200px'
+    }}>
         <h3>Car name: {props.name}</h3>
         <p>Year: <strong>{props.year}</strong></p>
-        {props.children}
+        <input type="text" onChange={props.onChangeName} value={props.name} />
+        {/* <button onClick={props.onChangeTitle}>Click</button> */}
+        <button onClick={props.onDelete}>Delete</button>
     </div>
 )
